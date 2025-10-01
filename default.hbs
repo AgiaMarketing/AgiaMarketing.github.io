@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {{! Document Settings }}
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    {{! Page Meta }}
+    <title>{{meta_title}}</title>
+    <meta name="description" content="{{meta_description}}" />
+
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="shortcut icon" href="{{asset "favicon.ico"}}">
+
+    {{! Styles'n'Scripts }}
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic|Open+Sans:700,400" />
+    <link rel="stylesheet" href="{{asset "css/bootstrap.min.css"}}" />
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="{{asset "css/flexslider.css"}}" />
+	<link rel="stylesheet" type="text/css" href="{{asset "css/styles.css"}}" />
+    <link rel="stylesheet" href="{{asset "css/queries.css"}}" />
+    <link rel="stylesheet" href="{{asset "css/animate.css"}}" />
+    <link rel="stylesheet" href="{{asset "fancybox/jquery.fancybox.css"}}">
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+        
+    {{! Ghost outputs important style and meta data with this tag }}
+    {{ghost_head}}
+</head>
+<body id="top" class="{{body_class}}">
+    <div id="perspective" class="perspective effect-moveleft">
+        {{navigation}}
+        <div class="nav-container">
+            <div class="nav-wrapper">
+                <div class="site-wrapper">
+
+                {{! Everything else gets inserted here }}
+                {{{body}}}
+
+                <footer>
+                    <div class="container">
+                        <div class="row">
+                        <div class="col-md-2 col-xs-12  logo-bottom">
+                            <a href="{{@blog.url}}"><img src="/img/logo-bottom.png" alt="logo"></a>
+                            <p>&copy; {{date format="YYYY"}} AGIA</p>
+                            <p>All Rights Reserved.</p>
+                        </div>
+                        <div class="col-md-2 col-md-offset-1 col-xs-12  footer-div">
+                            <h3>who we are</h3>
+                            <p><a href="/">home</a></p>
+                            <p><a href="/our-projects">our projects</a></p>
+                            <p><a href="/work-with-us">work with us</a></p>
+                        </div>
+                        <div class="col-md-2 col-md-offset-1 col-xs-12  footer-div">
+                            <h3>Legal stuff</h3>
+                            <p><a href="#">Terms of service</a></p>
+                            <p><a href="#">Privacy Policy</a></p>
+                        </div>
+                        <div class="col-md-2 col-md-offset-1 col-xs-12 footer-div">
+                            <h3>contact</h3>
+                            <a target="_blank" href="https://www.google.com/maps/dir//3342+N+Halsted+St,+Chicago,+IL+60657/@41.9424119,-87.6549524,15.5z/data=!4m13!1m4!3m3!1s0x880fd3afa1638505:0xa9d18216e1fac6ee!2s3342+N+Halsted+St,+Chicago,+IL+60657!3b1!4m7!1m0!1m5!1m1!1s0x880fd3afa1638505:0xa9d18216e1fac6ee!2m2!1d-87.6497035!2d41.9430668"><p>3342 N Halsted St Chicago IL, 60657</p></a>
+                            <a href="tel:+12242362442"><p>224.236.2442</p>
+                        </div>
+                        </div>
+                    </div>
+                </footer>
+
+                </div>
+                <script src='https://www.google.com/recaptcha/api.js'></script>
+                {{!-- jQuery needs to come before `{{ghost_foot}}` so that jQuery can be used in code injection --}}
+                <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+                {{! Ghost outputs important scripts and data with this tag }}
+                {{ghost_foot}}
+                
+                {{! The main JavaScript files for Agia }}
+                <script type="text/javascript" src="{{asset "js/waypoints.min.js"}}"></script>
+                <script type="text/javascript" src="{{asset "js/bootstrap.min.js"}}"></script>
+                <script type="text/javascript" src="{{asset "js/modernizr.js"}}"></script>
+                <script type="text/javascript" src="{{asset "js/scripts.js"}}"></script>
+                <script type="text/javascript" src="{{asset "js/jquery.flexslider.js"}}"></script>
+                <script type="text/javascript" src="{{asset "/fancybox/jquery.mousewheel-3.0.6.pack.js"}}"></script>
+                <script type="text/javascript" src="{{asset "/fancybox/jquery.fancybox.pack.js"}}"></script>
+                <script type="text/javascript" src="{{asset "js/common.js"}}"></script>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

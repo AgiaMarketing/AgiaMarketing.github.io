@@ -1,0 +1,40 @@
+/* 320px (iPhone) */
+@media screen and (max-width:320px) {
+}
+/* 480px (WVGA - Low End Windows Phone) */
+@media screen and (max-width:480px) {
+	.wrapper { background: #f3f5f8; height: 400px; }
+	/*.iphone { display: none; }
+	.fluid-white { display: none; }*/
+	.wp2, .wp4, .wp5, .light-box { margin-bottom: 30px; }
+	.legals { text-align: center; margin: 0; padding: 0; }
+	.credit { text-align: center; }
+        .hero h1 {font-size: 41px;}
+        .ignite-cta h1{font-size:25px;}
+        .ignite-btn{width:86%;}
+}
+@media screen and (max-width:767px) {
+   .iphone, .fluid-white{width:100%;}
+   footer .col-xs-12{padding:0 50px;}
+   .logo-bottom{border-bottom:1px solid #3e3e3e;padding:60px 50px !important;}
+   .footer-div h3{margin-top:50px;}
+}
+/* xGA iPad */
+@media screen and (max-width:1024px) {
+	.wp3 { background-position: 50px 0; }
+	.swag { background-attachment: scroll; }
+	.subscribe { background-attachment: scroll; }
+}
+/* 1200px (Small Desktop, Netbook) */
+@media screen and (max-width:1280px) {
+	.wp3 { background-position: 50px 0; }
+}
+/* Bootstrap 990px Breakpoint to 480px */
+@media screen and (min-width:480px) and (max-width:991px) {
+	/*.iphone { display: none; }
+	.fluid-white { display: none; }*/
+	.wrapper { background: #f3f5f8; height: 540px; }
+	.wp2, .wp4, .wp5, .light-box { margin-bottom: 30px; }
+	.legals { text-align: center; margin: 0; padding: 0; }
+	.credit { text-align: center; }
+}
